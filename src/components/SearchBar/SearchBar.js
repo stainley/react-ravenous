@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
     renderSoftByOptions() {
         return Object.keys(sortByOptions).map(sortByOption => {
             let sortByOptionValue = sortByOptions[sortByOption];
-
+            return <li key={sortByOptionValue}>{sortByOption}</li>
         });
     }
 
@@ -21,7 +21,7 @@ class SearchBar extends React.Component {
             <div className="SearchBar">
                 <div className="SearchBar-sort-options">
                     <ul>
-                        renderSoftByOptions();
+                        {this.renderSoftByOptions()}
                     </ul>
                 </div>
                 <div className="SearchBar-fields">
